@@ -297,9 +297,6 @@ function handleKeydown(event: KeyboardEvent): void {
       inputElement.value = '';
       resultElement.textContent = '';
       resultElement.className = 'w-full text-right text-xl text-gray-500 min-h-[1.5rem]';
-
-      // 通知用户
-      naimo.system.notify(`${expression} = ${calculation.result}`, '计算完成');
     }
   }
 
