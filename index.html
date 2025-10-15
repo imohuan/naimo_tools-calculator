@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>计算器</title>
+</head>
+
+<body class="w-full h-screen overflow-hidden">
+  <div id="app" class="w-full h-full bg-white flex flex-col">
+    <!-- 输入区域 -->
+    <div class="flex-shrink-0 px-4 pt-4 pb-3 border-b border-gray-200">
+      <!-- 输入框 -->
+      <input type="text" id="input"
+        class="w-full bg-transparent text-gray-900 text-3xl font-light text-right outline-none mb-2"
+        placeholder="输入表达式..." autocomplete="off" spellcheck="false" />
+
+      <!-- 结果显示 -->
+      <div id="result" class="w-full text-right text-xl text-gray-500 min-h-[1.5rem]"></div>
+    </div>
+
+    <!-- 历史记录区域 -->
+    <div class="flex-1 overflow-y-auto px-4 py-3">
+      <!-- 历史记录标题 -->
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-sm font-medium text-gray-700">历史记录</h3>
+        <button id="clearAll" class="text-xs text-red-500 hover:text-red-600 transition-colors">
+          清空全部
+        </button>
+      </div>
+
+      <!-- 历史记录列表 -->
+      <div id="history" class="space-y-2">
+        <!-- 历史记录项将动态插入这里 -->
+      </div>
+
+      <!-- 空状态提示 -->
+      <div id="emptyState" class="text-center text-gray-400 text-sm py-8">
+        暂无历史记录
+      </div>
+    </div>
+
+    <!-- 提示区域 -->
+    <div class="flex-shrink-0 px-4 py-2 border-t border-gray-200 bg-gray-50">
+      <div class="flex justify-between text-xs text-gray-500">
+        <span>支持: + - * / ( ) %</span>
+        <span>Enter 保存 | Esc 清空</span>
+      </div>
+    </div>
+  </div>
+  <!-- TypeScript 入口文件 -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{
+  "$schema": "./schema.json",
+  "id": "calculator",
+  "name": "计算器",
+  "version": "1.0.0",
+  "author": "你的名字",
+  "icon": "./ico.png",
+  "description": "一个简洁实用的计算器工具",
+  "category": "tool",
+  "enabled": true,
+  "main": "./index.html",
+  "preload": "./preload.js",
+  "feature": [
+    {
+      "path": "calc",
+      "name": "计算器",
+      "icon": "./ico.png",
+      "description": "打开计算器进行数学运算",
+      "weight": 100,
+      "lifecycleType": "reuse",
+      "singleton": true,
+      "anonymousSearchFields": [
+        "calculator",
+        "calc",
+        "计算器",
+        "计算",
+        "加减乘除"
+      ]
+    }
+  ]
+}

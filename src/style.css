@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* 输入框样式 */
+#input {
+  caret-color: #3b82f6; /* 蓝色光标 */
+}
+
+#input::placeholder {
+  @apply text-gray-400;
+}
+
+/* 结果显示动画 */
+#result {
+  transition: all 0.2s ease;
+}
+
+#result.error {
+  @apply text-red-500;
+}
+
+#result.success {
+  @apply text-green-600;
+}
+
+/* 历史记录项样式 */
+.history-item {
+  @apply bg-gray-50 rounded-lg p-3 transition-all duration-200;
+}
+
+.history-item:hover {
+  @apply bg-gray-100;
+}
+
+.history-content {
+  @apply flex items-baseline gap-2 flex-wrap;
+}
+
+.history-item .expression {
+  @apply text-gray-700 text-sm;
+}
+
+.history-item .result {
+  @apply text-blue-600 font-medium text-base;
+}
+
+.history-item .delete-btn {
+  @apply text-gray-400 hover:text-red-500 transition-colors cursor-pointer;
+}
+
+/* 按钮样式 */
+button {
+  @apply transition-all duration-150;
+}
+
+button:active {
+  @apply scale-95;
+}
+
+/* 滚动条样式 */
+#history::-webkit-scrollbar {
+  width: 6px;
+}
+
+#history::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+#history::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+#history::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* 全局样式 */
+* {
+  user-select: text;
+  -webkit-user-select: text;
+}
